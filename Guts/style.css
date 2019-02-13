@@ -1,0 +1,9 @@
+#csv_overflow {
+    background: rgb(108, 45, 167);
+    color: white;
+    padding: 15px;
+    width: 50%;
+    height: 50%;
+    overflow: auto;
+    border: 1px solid #ccc;
+  }
