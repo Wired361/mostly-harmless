@@ -1,19 +1,30 @@
+
 .carousel-control-prev {
-  margin-left:25%;
-  margin-right:25%;
+  margin-left:15%;
+  margin-right:15%;
+}
+
+.col-md-auto{
+  background-color: dimgray;
+  margin-left:10%;
+}
+
+.jumbotron-fluid{
+  max-height: 5%;
 
 }
 .carousel-control-next {
-  margin-left:25%;
-  margin-right:25%;
+  margin-left:15%;
+  margin-right:15%;
 
 }
 
 .carousel-inner img {
-  margin-top: 2.5%;
+  margin-bottom: 0.5%;
   margin-left: 15%;
   max-width: 70%;
   width: 100%;
+  max-height: 60%;
   height: 100%;
 }
 
