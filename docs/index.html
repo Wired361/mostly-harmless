@@ -15,7 +15,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand" href="#">
-            <img src="Untitled.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            <img src="img/Untitled.svg" width="30" height="30" class="d-inline-block align-top" alt="">
             DataViz
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,13 +27,14 @@
               <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="comps.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Comparisons
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="comps.html">Comparison 1</a>
-                  <a class="dropdown-item" href="comps.html">Comparison 2</a>
-                  <a class="dropdown-item" href="comps.html">Comparison 3</a>
+                  <a class="dropdown-item" href="viz1.html">Comparison 1</a>
+                  <a class="dropdown-item" href="viz2.html">Comparison 2</a>
+                  <a class="dropdown-item" href="viz3.html">Comparison 3</a>
+                  <a class="dropdown-item" href="viz4.html">Comparison 4</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -45,15 +46,15 @@
           </ul>
         </div>
       </nav>
-              <div class="container">
+              <div class="container-fluid">
                   <div class="row">
-                    <div class="col">
+                    <div class="col-sm-12 col-md-auto">
                       <h1>
                         Home
                       </h1>
                       <h5>
                       <small class="text-muted">
-                        A set of visualizations from a data set containing climate information from around the world. Latitudes and longitudes were put through a nearest neighbor algorithm to supply city and country locations. Each visualization is accompanied by a short analysis on the comparisons page for the corresponding image.
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem nobis, earum dignissimos, rem hic esse necessitatibus, nisi officiis temporibus placeat odio! Laborum eveniet suscipit ab optio natus assumenda aliquid corrupti.
                     </small>
                       </h5>
                     </div>
@@ -64,27 +65,35 @@
                             <li data-target="mycarousel" data-slide-to="0" class="active"></li>
                             <li data-target="mycarousel" data-slide-to="1"></li>
                             <li data-target="mycarousel" data-slide-to="2"></li>
+                            <li data-target="mycarousel" data-slide-to="3"></li>
                           </ul>
                           <div class="carousel-inner">
                             <div class="carousel-item active">
-                              <img src="Latitude_Cloudiness.svg" class="d-flex w-100" alt="placeholder 1">
+                              <img src="img/lunch_free.svg" class="d-flex w-100" alt="placeholder 1">
                               <div class="carousel-caption">
-                                <h4>Latitude vs. Cloudiness</h4>
-                                <p>clouds are up high</p>
+                                <h4>Reading vs. Math</h4>
+                                <p>for students with free lunch</p>
                               </div>   
                             </div>
                             <div class="carousel-item">
-                              <img src="Latitude_Humidity.svg" class="d-flex w-100"  alt="placeholder 2">
+                              <img src="img/lunch_reg.svg" class="d-flex w-100"  alt="placeholder 2">
                               <div class="carousel-caption">
-                                <h4>Latitude vs. Humidity</h4>
-                                <p>humidity is wet.</p>
+                                <h4>Reading vs. Math</h4>
+                                <p>for students with regular lunch</p>
                               </div>   
                             </div>
                             <div class="carousel-item">
-                              <img src="Latitude_Temperature.svg"  class="d-flex w-100" alt="placeholder 3">
+                              <img src="img/test_prep_y.svg"  class="d-flex w-100" alt="placeholder 3">
                               <div class="carousel-caption">
-                                <h4>Latitude vs. Temp</h4>
-                                <p>The higher the temp, the hotter it is.</p>
+                                <h4>Reading vs. Math</h4>
+                                <p>for students with test prep</p>
+                              </div>   
+                            </div>
+                            <div class="carousel-item">
+                              <img src="img/test_prep_n.svg"  class="d-flex w-100" alt="placeholder 3">
+                              <div class="carousel-caption">
+                                <h4>Reading vs. Math</h4>
+                                <p>for students without test prep</p>
                               </div>   
                             </div>
                           </div>
