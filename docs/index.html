@@ -1,68 +1,103 @@
 <!DOCTYPE html>
 <html lang="en-us">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta charset="UTF-8">
     <title>Data Viz Home</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
-
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script $enable-responsive-font-sizes= "true"></script>
 </head>
 
 <body>
-    <div class="topnav">
-        <a class = "active" href="index.html">Index</a>
-        <a href="comps.html">Comparisons</a>
-        <a href="data.html">Data</a>
-    <a href="links.html">Links</a>
-    </div>
-    <div>
-        <div>
-            <div class="container-fluid">
-                <div class="jumbotron jumbotron-fluid">
-                
-                    <h1>Home</h1> 
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, fugit accusantium. Vero, nisi hic odio sunt doloremque enim ducimus veniam fugit quos ipsa aut id quo corrupti mollitia alias fugiat.</p> 
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <img src="Untitled.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+            DataViz
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="comps.html" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Comparisons
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="comps.html">comp 1</a>
+                  <a class="dropdown-item" href="comps.html">comp 2</a>
+                  <a class="dropdown-item" href="comps.html">comp 3</a>
                 </div>
-            </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="data.html">Data</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="links.html">Reference</a>
+            </li>
+          </ul>
         </div>
-        <div id="mycarousel" class="carousel slide" data-ride="carousel">
-                <ul class="carousel-indicators">
-                  <li data-target="mycarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="mycarousel" data-slide-to="1"></li>
-                  <li data-target="mycarousel" data-slide-to="2"></li>
-                </ul>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="https://via.placeholder.com/800x400" class="d-block w-100" alt="placeholder 1" width="800" height="400">
-                    <div class="carousel-caption">
-                      <h3>Hodor, hodor.</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>   
+      </nav>
+              <div class="container">
+                  <div class="row">
+                    <div class="col">
+                      <h1>
+                        Home
+                      </h1>
+                      <h5>
+                      <small class="text-muted">
+                        Stuff about clouds Placeat autem nobis nam consequatur veritatis doloribus quod est, libero ut mollitia. Aspernatur eveniet sequi pariatur laudantium quod libero ratione fugit consequatur?
+                    </small>
+                      </h5>
+                    </div>
                   </div>
-                  <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400" class="d-block w-100"  alt="placeholder 2" width="800" height="400">
-                    <div class="carousel-caption">
-                      <h3>Hodor!</h3>
-                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>   
-                  </div>
-                  <div class="carousel-item">
-                    <img src="https://via.placeholder.com/800x400"  class="d-block w-100" alt="placeholder 3" width="800" height="400">
-                    <div class="carousel-caption">
-                      <h3>Hodor</h3>
-                      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-                    </div>   
+                  <div class="container">
+                      <div id="mycarousel" class="carousel slide"data-pause="hover"data ride = "carousel">
+                          <ul class="carousel-indicators">
+                            <li data-target="mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="mycarousel" data-slide-to="1"></li>
+                            <li data-target="mycarousel" data-slide-to="2"></li>
+                          </ul>
+                          <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="Latitude_Cloudiness.svg" class="d-flex w-100" alt="placeholder 1">
+                              <div class="carousel-caption">
+                                <h4>Latitude vs. Cloudiness</h4>
+                                <p>clouds are up high</p>
+                              </div>   
+                            </div>
+                            <div class="carousel-item">
+                              <img src="Latitude_Humidity.svg" class="d-flex w-100"  alt="placeholder 2">
+                              <div class="carousel-caption">
+                                <h4>Latitude vs. Humidity</h4>
+                                <p>humidity is wet.</p>
+                              </div>   
+                            </div>
+                            <div class="carousel-item">
+                              <img src="Latitude_Temperature.svg"  class="d-flex w-100" alt="placeholder 3">
+                              <div class="carousel-caption">
+                                <h4>Latitude vs. Temp</h4>
+                                <p>The higher the temp, the hotter it is.</p>
+                              </div>   
+                            </div>
+                          </div>
+                          <a class="carousel-control-prev" href="#mycarousel" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                          </a>
+                          <a class="carousel-control-next" href="#mycarousel" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                          </a>
+                        </div>
+          
+                    </div>
                   </div>
                 </div>
-                <a class="carousel-control-prev" href="#mycarousel" data-slide="prev">
-                  <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" href="#mycarousel" data-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </a>
-              </div>
 </body>
 </html>

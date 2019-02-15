@@ -1,24 +1,11 @@
-
 .carousel-control-prev {
   margin-left:15%;
   margin-right:15%;
 }
-
-.col-md-auto{
-  background-color: dimgray;
-  margin-left:10%;
-}
-
-.jumbotron-fluid{
-  max-height: 5%;
-
-}
 .carousel-control-next {
   margin-left:15%;
   margin-right:15%;
-
 }
-
 .carousel-inner img {
   margin-bottom: 0.5%;
   margin-left: 15%;
@@ -28,31 +15,17 @@
   height: 100%;
 }
 
+.table{
+  max-height: 40rem;
+  overflow-y: auto;
+}
 
-  /* Add a black background color to the top navigation */
-.topnav {
-    background-color: #333;
-    overflow: hidden;
-  }
-  
-  /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
-  
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: rgb(80, 37, 136);
-    color: white;
-  }
+
+
+thead th {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+  z-index: 5;
+  border: 2px #8400ff
+}
