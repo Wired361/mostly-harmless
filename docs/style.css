@@ -1,4 +1,6 @@
-
+img #vizimg {
+  max-height: 40%;
+}
 
 .carousel-control-prev {
   margin-left:15%;
