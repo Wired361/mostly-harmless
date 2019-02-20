@@ -1,10 +1,10 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8">
-  <title>Back To School</title>
+  <title>Overview Analysis</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
       <img id="logolink" src="img/logo.svg" class="d-inline-block align-top" alt="">
-      <a class="lead h3">Data Viz</a>
+      <a href="index.html" class="lead h3">Data Viz</a>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,7 +39,7 @@
             Analysis
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="viz1.html">Overview</a>
+            <a class="dropdown-item active" href="viz1.html">Overview</a>
             <a class="dropdown-item" href="viz2.html">Deeper</a>
             <a class="dropdown-item" href="viz3.html">Deepest</a>
             <a class="dropdown-item" href="viz4.html">Conclusions</a>
@@ -56,57 +56,65 @@
   </nav>
 
   <div class="container">
-
     <div class="row">
-
-      <!-- Post Content Column -->
       <div class="col-lg-8">
-
-        <!-- Title -->
+        <div class='bg-light px-5 py-3 my-3'>
         <h1 class="mt-4">Analysis</h1>
-
-        <!-- Author -->
         <p class="lead">
           Overview
         </p>
+        <p>Our goal for this project was to investigate the factors involved in improving a student's test scores. This meant a multilevel analysis of the tracked variables affecting the students and their interaction with the scores. </p>
 
         <hr>
 
         <!-- Preview Image -->
-        <img class="img-fluid rounded" src="img/Test_bar.svg" alt="">
+        <img class="img-fluid rounded mx-auto d-block" src="img/Test_bar.svg" alt="">
 
         <hr>
 
         <!-- Post Content -->
-        <p class="lead">If we average the scores of all the students based on whether they completed test prep, we can see that test prep does appear to have a positive effect on their scores.</p>
+        <p class="lead">If we average the scores of all the students based on whether they completed test prep, we can see that students who complete test prep score higher than students that don't.</p>
 
-        <p>Shocker, I know. We want to know why. More digging is required...
+        <p></p>
+
+        <p>Let's start by checking some of the other columns for clues. <small class="text-muted">(I did the grunt work for us so I'll just share my results)</small> Parents are always involved in their children's lives, so their education might have some correlation with the kids' scores. 
         </p>
-
-        <p>Let's start by checking some of the other columns for clues. <small>(I did the grunt work for us so I'll just share my results)</small> Parents are always involved in their children's lives, so their education might have some correlation with the kids' scores. 
-        </p>
-
+        </div>
+        <br>
+        <br>
+        <br>
+        <p class="lead">Parents</p>
         <hr>
+        <img class="img-fluid rounded mx-auto d-block" src="img/parent_bar.svg" alt="">
         
-        <img class="img-fluid rounded" src="img/parent_bar.svg" alt="">
-
-
         <hr>
-        <blockquote class="blockquote">
-          <p class="mb-0"> "If I have seen further it is by standing on the shoulders of Giants."</p>
-          <footer class="blockquote-footer">Isaac Newton - 1675
-            <br>
-            <cite title="Source Title">British Two Pound Coim</cite>
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"> "If I have seen further it is by standing on the shoulders of Giants."<br></p>
+          <footer class="blockquote-footer">Isaac Newton
+            <cite title="Source Title"> British Two Pound Coin</cite>
           </footer>
         </blockquote>
-        <p class="lead">Parents</p>
-
-        <p>There does seem to be some advantage to having highly educated parents. This makes a lot of sense. If you have a question as a kid, first you ask google: "OK, Google, what's the square root of pi?"</p>
-        <p>While their poor phone calculates for the rest of time, they'd ask their parents. After seeing this plot, we can make the assumption that highly educated parents will <em>probably</em> know the answer, helping their kids do better on tests.</p>
-
-
+      
         <hr>
 
+        <p class="lead">There does appear to be some advantage to having highly educated parents. </p>
+        <p>This makes a lot of sense. As a kid, if you have a question, first you ask Siri: "Hey, Siri, what's the square root of pi?" and while Siri calculates for the rest of time, they then ask their parents.<br></p>
+        <p>After seeing this plot, we can make the assumption that highly educated parents will <em>probably</em> know the answer, helping their kids do better on tests.</p>
+        <p>We're making progress, but if our end goal is to help students perform better, we can't very well ask their parents to go back to school in order to give their child a better test score. </p>
+
+        <div class="d-inline-flex-justify-end align-items-center p-2 bd-highlight bg-light">
+        <nav id="pagenav">
+            <ul class="pagination justify-content-end my-auto">
+              <li class="page-item disabled"><a class="page-link" href="viz1.html" tabindex="-1" aria-disabled="true">Previous</a></li>
+              <li class="page-item active"><a class="page-link" href="viz1.html">1</a></li>
+              <li class="page-item"><a class="page-link" href="viz2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="viz3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="viz4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="viz2.html">Next</a></li>
+              <li class="page-item"><a class="page-link" href="viz4.html">Last</a></li>
+            </ul>
+        </nav>
+        </div>
 
 
 
@@ -132,13 +140,16 @@
               <div class="col-lg-6">
                 <ul class="list-unstyled mb-0">
                   <li>
-                    <a href="#">Overview</a>
+                    <a href="viz1.html">Overview</a>
                   </li>
                   <li>
-                    <a href="#">Deeper</a>
+                    <a href="viz2.html">Deeper</a>
                   </li>
                   <li>
-                    <a href="#">Deepest</a>
+                    <a href="viz3.html">Deepest</a>
+                  </li>
+                  <li>
+                    <a href="viz4.html">Conclusions</a>
                   </li>
                 </ul>
               </div>

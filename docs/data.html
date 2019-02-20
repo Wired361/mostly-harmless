@@ -1,4 +1,4 @@
-<!DOCTYPE html5>
+<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
       <img id="logolink" src="img/logo.svg" class="d-inline-block align-top" alt="">
-      <a class="nav-item lead h3">Data Viz</a>
+      <a href="index.html" class="lead h3">Data Viz</a>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,13 +56,21 @@
   </nav>
 
 
+  <div id="datajumbo" class="jumbotron text-center py-3">
+      <div class="container">
+        <h1 class="jumbotron-heading">Resources</h1>
+        <p class="lead text-muted">Our goal for this project was to investigate the factors involved in improving a student's test scores. This meant a multilevel analysis of the tracked variables affecting the students and the variable's interaction with the scores.</p>
+        <p>
+          <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" class="btn btn-primary my-2">Download</a>
+          <a href="data.html" class="btn btn-secondary my-2">Explore the Data</a>
+        </p>
+      </div>
+    </div>
 
-  <div class="container">
-    <h1>Data</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, fugit accusantium. Vero, nisi hic odio sunt
-      doloremque enim ducimus veniam fugit quos ipsa aut id quo corrupti mollitia alias fugiat.</p>
-  </div>
+    <div>
 
+
+    </div>
 
 
   <div class='container'>
@@ -10094,7 +10102,9 @@
   </div>
 
 
-  <footer class="container py-5">
+
+<!-- Footer Container -->
+  <footer class="container py-5 mt-3 bg-light">
     <div class="row">
       <div class="col-12 col-md">
         <img id="logolink" src="img/logo.svg" class="d-block mb-2" alt="">
@@ -10128,6 +10138,9 @@
     </div>
   </footer>
 </body>
+
+<!-- I didn't want this to be here, but I ran out of time to format it outside the html -->
+
 <script>
   var $rows = $('#studenttable tr:not(:first)');
   $('#search').keyup(function () {

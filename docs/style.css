@@ -12,7 +12,13 @@ img#logolink {
 .btn-primary:hover{
   color: #fff;
   background-color: rgb(80, 0, 155);
-  border-color: rgb(80, 0, 155)F;
+  border-color: rgb(80, 0, 155);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: rgb(155, 155, 155);
+  background-color: rgb(48, 0, 94);
+  border-color: rgb(0, 0, 0);
 }
 
 div #bboxlight {
@@ -26,7 +32,6 @@ div #bboxdark {
 }
 
 img#index-bar {
-  padding-top: 10%;
   max-width: 90%;
   border-radius: 2rem 2rem 2rem 2rem;
 }
@@ -47,7 +52,7 @@ img#index-t-scat-n {
 
 
 .table{
-  max-height: 40rem;
+  max-height: 50%;
   overflow-y: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
@@ -59,56 +64,6 @@ thead th {
   position: -webkit-sticky;
   top: 0;
   z-index: 5;
-  border: 2px #8400ff
+  border: 0.5rem #8400ff
 }
 
-@media screen and (max-width: 767px) {
-  .row-offcanvas {
-    position: relative;
-    -webkit-transition: all .25s ease-out;
-         -o-transition: all .25s ease-out;
-            transition: all .25s ease-out;
-  }
-
-  .row-offcanvas-right {
-    right: 0;
-  }
-
-  .row-offcanvas-left {
-    left: 0;
-  }
-
-  .row-offcanvas-right
-  .sidebar-offcanvas {
-    right: -100%; /* 12 columns */
-  }
-
-  .row-offcanvas-right.active
-  .sidebar-offcanvas {
-    right: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left
-  .sidebar-offcanvas {
-    left: -100%; /* 12 columns */
-  }
-
-  .row-offcanvas-left.active
-  .sidebar-offcanvas {
-    left: -50%; /* 6 columns */
-  }
-
-  .row-offcanvas-right.active {
-    right: 50%; /* 6 columns */
-  }
-
-  .row-offcanvas-left.active {
-    left: 50%; /* 6 columns */
-  }
-
-  .sidebar-offcanvas {
-    position: absolute;
-    top: 0;
-    width: 50%; /* 6 columns */
-  }
-}

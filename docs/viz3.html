@@ -1,79 +1,205 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Data Comparisons</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta charset="UTF-8">
+  <title>Deeper Analysis</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="img/shortcut.ico">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="script.js"></script>
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
-        <a class="navbar-brand" href="#">
-            <img src="img/Untitled.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-            DataViz
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home </a>
-            </li>
-            <li class="nav-item active dropdown active">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Comparisons</a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                  <a class="dropdown-item" href="viz1.html">Comparison 1</a>
-                  <a class="dropdown-item" href="viz2.html">Comparison 2</a>
-                  <a class="dropdown-item active" href="viz3.html">Comparison 3</a>
-                  <a class="dropdown-item" href="viz4.html">Comparison 4</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="data.html">Data</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="links.html">Reference</a>
-            </li>
+  <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+      <img id="logolink" src="img/logo.svg" class="d-inline-block align-top" alt="">
+      <a href="index.html" class="lead h3">Data Viz</a>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdownMenuLink" role="button"
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Analysis
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="viz1.html">Overview</a>
+            <a class="dropdown-item" href="viz2.html">Deeper</a>
+            <a class="dropdown-item active" href="viz3.html">Deepest</a>
+            <a class="dropdown-item" href="viz4.html">Conclusions</a>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="data.html">Resources</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="links.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <div class="row">
+
+      <!-- Post Content Column -->
+      <div class="col-lg-8">
+
+        <!-- Title -->
+        <h1 class="mt-4">Analysis</h1>
+
+        <!-- Author -->
+        <p class="lead">
+          Deeper
+        </p>
+
+        <hr>
+
+        <!-- Preview Image -->
+        <img class="img-fluid rounded mx-auto d-block" src="img/all_scat.svg" alt="">
+
+        <hr>
+
+        <!-- Post Content -->
+        <p class="lead">Scattering the Scores</p>
+
+        <p>In order to analyze further, we need more resolution. We plotted every math score against every reading score for all the students. This is the platform upon which we will build the rest of our analysis. It looks pretty but it doesn't tell us anything --<small class="text-muted">yet</small>.</p>
+
+        <p class>From here, we will be group the students using different criteria and plotting the results using the same format as the graph above.</p>
+        <br>
+        <br>
+        <br>
+        <p class="lead">Test Prep</p>
+        <hr>
+        <img class="img-fluid rounded mx-auto d-block" src="img/all_scat_div.svg" alt="">
+        
+        <hr>
+        <blockquote class="blockquote text-center">
+          <p class="mb-0"> "If I have seen further it is by standing on the shoulders of Giants."<br></p>
+          <footer class="blockquote-footer">Isaac Newton
+            <cite title="Source Title"> British Two Pound Coin</cite>
+          </footer>
+        </blockquote>
+      
+        <hr>
+
+        <p class="lead">There does appear to be some advantage to having highly educated parents. </p>
+        <p>This makes a lot of sense. As a kid, if you have a question, first you ask Siri: "Hey, Siri, what's the square root of pi?" and while Siri calculates for the rest of time, they then ask their parents.<br></p>
+        <p>After seeing this plot, we can make the assumption that highly educated parents will <em>probably</em> know the answer, helping their kids do better on tests.</p>
+        <p>We're making progress, but if our end goal is to help students perform better, we can't very well ask their parents to go back to school in order to give their child a better test score. </p>
+        <hr>
+
+        <nav id="pagenav">
+            <ul class="pagination justify-content-end">
+              <li class="page-item"><a class="page-link" href="viz1.html" tabindex="-1">Previous</a></li>
+              <li class="page-item"><a class="page-link" href="viz1.html">1</a></li>
+              <li class="page-item active"><a class="page-link" href="viz2.html">2</a></li>
+              <li class="page-item"><a class="page-link" href="viz3.html">3</a></li>
+              <li class="page-item"><a class="page-link" href="viz4.html">4</a></li>
+              <li class="page-item"><a class="page-link" href="viz2.html">Next</a></li>
+              <li class="page-item"><a class="page-link" href="viz4.html">Last</a></li>
+            </ul>
+        </nav>
+
+
+
+
+
+
+
+
+
+        
+      
+
+      </div>
+
+      <!-- Sidebar Widgets Column -->
+      <div class="col-md-4">
+
+        <!-- Categories Widget -->
+        <div class="card my-4">
+          <h5 class="card-header">Analysis</h5>
+          <div class="card-body">
+            <div class="row">
+              <div class="col-lg-6">
+                <ul class="list-unstyled mb-0">
+                  <li>
+                    <a href="viz1.html">Overview</a>
+                  </li>
+                  <li>
+                    <a href="viz2.html">Deeper</a>
+                  </li>
+                  <li>
+                    <a href="viz3.html">Deepest</a>
+                  </li>
+                  <li>
+                    <a href="viz4.html">Conclusions</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <footer class="container py-5">
+      <div class="row">
+        <div class="col-12 col-md">
+          <img id="logolink" src="img/logo.svg" class="d-block mb-2" alt="">
+          <small class="d-block mb-3 text-muted">DataViz-2019</small>
+        </div>
+        <div class="col-6 col-md">
+          <h5>Visualizations</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Overview</a></li>
+            <li><a class="text-muted" href="#">Deeper</a></li>
+            <li><a class="text-muted" href="#">Deepest</a></li>
+            <li><a class="text-muted" href="#">Conclusions</a></li>
           </ul>
         </div>
-      </nav>
-
-
-      <div class="container-fluid">
-            <div class="jumbotron">
-              
-                    <h1 class="display-4">Lunch<small class="h4 text-muted"> it's important</small></h1>
-              </div>
-          </div>
-      
-          <div class="container">
-              <div class="row">
-                <div class="col-sm-6">
-                    <p class="h4">Reading vs. Math Scores</p>
-                    <p class="lead">with free lunch</p>
-                    <img id="vizimg" class="img-fluid"src="img/lunch_free.svg" alt="reading vs math w/prep">
-                    <p class="lead justify-content-md-left">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam praesentium in sequi sunt alias voluptates deleniti amet aspernatur fuga. Dolorem provident minima placeat suscipit debitis perspiciatis id qui tenetur reprehenderit?
-                    </p>
-                </div>
-                <div class="col-sm-4">
-                    <p class="lead justify-content-md-right">Other plots</p>
-                    <img class="img-fluid" src="img/lunch_reg.svg" alt="reading vs math w/prep">
-                    <img class="img-fluid" src="img/test_prep_y.svg" alt="reading vs math w/prep">
-                    <img class="img-fluid" src="img/test_prep_n.svg" alt="reading vs math w/prep">
-                </div>
-            
-                    
-      
-            </div>
-
+        <div class="col-6 col-md">
+          <h5>Resources</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">Data</a></li>
+            <li><a class="text-muted" href="#">Download</a></li>
+            <li><a class="text-muted" href="#">API:<small> Under construction</small></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md">
+          <h5>About</h5>
+          <ul class="list-unstyled text-small">
+            <li><a class="text-muted" href="#">References</a></li>
+            <li><a class="text-muted" href="#">Contact Me</a></li>
+            <li><a class="text-muted" href="#">Tools Used</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
 
 
 </body>
+
 </html>
