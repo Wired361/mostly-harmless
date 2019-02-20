@@ -25,7 +25,7 @@
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
       <img id="logolink" src="img/logo.svg" class="d-inline-block align-top" alt="">
-      <a href="index.html" class="lead h3">Data Viz</a>
+      <a class="nav-item lead">Data Viz</a>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -57,13 +57,13 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-lg-8">
+     <div class="col-lg-8">
         <div class='bg-light px-5 py-3 my-3'>
         <h1 class="mt-4">Analysis</h1>
         <p class="lead">
           Overview
         </p>
-        <p>Our goal for this project was to investigate the factors involved in improving a student's test scores. This meant a multilevel analysis of the tracked variables affecting the students and their interaction with the scores. </p>
+        <p>We will begin the analysis with a high level comparison of the average scores from students that have and have not completed test prep</p>
 
         <hr>
 
@@ -73,16 +73,13 @@
         <hr>
 
         <!-- Post Content -->
-        <p class="lead">If we average the scores of all the students based on whether they completed test prep, we can see that students who complete test prep score higher than students that don't.</p>
-
-        <p></p>
-
-        <p>Let's start by checking some of the other columns for clues. <small class="text-muted">(I did the grunt work for us so I'll just share my results)</small> Parents are always involved in their children's lives, so their education might have some correlation with the kids' scores. 
+        <p class="lead">There appears to be an increase in average scores of students that have completed test prep.</p>
+        <p>Our next step will be to plot other columns to see if test scores correlate with other variables.
         </p>
-        </div>
-        <br>
-        <br>
-        <br>
+        <small>We compared scores against all the other variables and noticed an interesting trend with parental level of education so we will focus on that investigation</small>
+        
+        
+      <div class='bg-light px-5 py-3 my-3'></div>
         <p class="lead">Parents</p>
         <hr>
         <img class="img-fluid rounded mx-auto d-block" src="img/parent_bar.svg" alt="">
@@ -114,21 +111,10 @@
               <li class="page-item"><a class="page-link" href="viz4.html">Last</a></li>
             </ul>
         </nav>
-        </div>
-
-
-
-
-
-
-
-
-
-        
-      
-
       </div>
 
+      </div>
+      </div>
       <!-- Sidebar Widgets Column -->
       <div class="col-md-4">
 
@@ -163,7 +149,7 @@
     <!-- /.row -->
 
   </div>
-  <footer class="container py-5">
+  <footer class="container-fluid py-1 pl-5 mt-3 bg-light">
       <div class="row">
         <div class="col-12 col-md">
           <img id="logolink" src="img/logo.svg" class="d-block mb-2" alt="">

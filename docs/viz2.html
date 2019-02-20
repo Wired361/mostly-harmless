@@ -4,7 +4,7 @@
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta charset="UTF-8">
-  <title>Deep Analysis</title>
+  <title>Deeper Analysis</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
@@ -18,14 +18,13 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
-  <script src="script.js"></script>
 </head>
 
 <body>
   <nav class="navbar navbar-expand-md navbar-light bg-light">
     <a class="navbar-brand" href="index.html">
       <img id="logolink" src="img/logo.svg" class="d-inline-block align-top" alt="">
-      <a href="index.html" class="lead h3">Data Viz</a>
+      <a class="nav-item lead">Data Viz</a>
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
       aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,58 +53,158 @@
       </ul>
     </div>
   </nav>
-
-  <div class="container">
-
+  <div class="container-fluid">
     <div class="row">
-
-      <!-- Post Content Column -->
-      <div class="col-lg-8">
-
-        <!-- Title -->
-        <h1 class="mt-4">Analysis</h1>
-
-        <!-- Author -->
-        <p class="lead">
-          Deeper
-        </p>
-
-        <hr>
-
-        <!-- Preview Image -->
-        <img class="img-fluid rounded mx-auto d-block" src="img/all_scat.svg" alt="">
-
-        <hr>
-
-        <!-- Post Content -->
-        <p class="lead">Scattering the Scores</p>
-
-        <p>In order to analyze further, we need more resolution. We plotted every math score against every reading score for all the students. This is the platform upon which we will build the rest of our analysis. It looks pretty but it doesn't tell us anything --<small class="text-muted">yet</small>.</p>
-
-        <p class>From here, we will be group the students using different criteria and plotting the results using the same format as the graph above.</p>
+      <div class="col-md-12 col-xl-8 py-md-3 pl-md-5">
+          <div class='bg-light px-5 py-3 my-3'>
+            <h1 class="mt-4">Analysis</h1>
+            <p class="lead">
+              Deeper
+            </p>
+            <hr>
+            <img class="img-fluid rounded mx-auto d-block" src="img/all_scat.svg" alt="">
+            <hr>
+            <p class="lead">Scattering the Scores</p>
+            <p>In order to analyze further, we need more resolution. We plotted every math score against every reading score for all the students. This is the platform upon which we will build the rest of our analysis. It looks pretty but it doesn't tell us anything --<small class="text-muted">yet</small></p>
+            <p>From here, we will group the students using different criteria and plotting the results using the same format as the graph above.</p>
+            <hr>
+        </div>
         <br>
+        <div class='bg-light px-5 py-3 my-3'>
+          <p class="lead">Adding contrast by separating out test prep</p>
+          <hr>
+          <img class="img-fluid rounded mx-auto d-block" src="img/all_scat_div.svg" alt="">
+          <hr>
+          <p>
+            When we compare the two groups against eachother, we can really see how test prep can improve test scores.
+            Not only does the group average appear to improve, but prep also appears to have instantiated a minimum score threshhold around 40%.
+          </p>
+          <p>
+            Our next step will be to make the above comparison again, but with the addition of our previously selected variable: parental level of education. 
+          </p>
+          <hr>
+        </div>
         <br>
-        <br>
-        <p class="lead">Test Prep</p>
-        <hr>
-        <img class="img-fluid rounded mx-auto d-block" src="img/all_scat_div.svg" alt="">
-        
-        <hr>
-        <blockquote class="blockquote text-center">
-          <p class="mb-0"> "If I have seen further it is by standing on the shoulders of Giants."<br></p>
-          <footer class="blockquote-footer">Isaac Newton
-            <cite title="Source Title"> British Two Pound Coin</cite>
-          </footer>
-        </blockquote>
-      
-        <hr>
-
-        <p class="lead">There does appear to be some advantage to having highly educated parents. </p>
-        <p>This makes a lot of sense. As a kid, if you have a question, first you ask Siri: "Hey, Siri, what's the square root of pi?" and while Siri calculates for the rest of time, they then ask their parents.<br></p>
-        <p>After seeing this plot, we can make the assumption that highly educated parents will <em>probably</em> know the answer, helping their kids do better on tests.</p>
-        <p>We're making progress, but if our end goal is to help students perform better, we can't very well ask their parents to go back to school in order to give their child a better test score. </p>
-        <hr>
-
+        <div class='bg-light px-5 py-3 my-3'>
+          <p class="lead">Binning results by parental education and no prep</p>
+          <hr>
+          <img class="img-fluid rounded mx-auto d-block" src="img/test_prep_n_bins.svg" alt="">
+          <hr>
+          <p>
+            Here we have plotted the scores without prep and grouped them by their parent's education. We highlighted the highest and lowest education levels in cyan and purple for readability.
+            We can see that students appear to do well in both groups but on the low end, student's with highly educated parents appear to have a similar threshold to the one we highlighted in the last plot.
+            Below is a table showing some important statistical values for each of the groups. 
+          </p>
+          <hr>
+          <p class="lead text-center">Statistical values of parental education groups for math scores</p>
+          <div class="d-inline-block-flex-nowrap px-3 py-3">
+            <table id="parenttable" class="table table-fluid table-sm table-striped table-responsive table-hover w-100">
+              <thead class="thead-dark">
+                <tr>
+                  <th scope=col></th>
+                  <th scope=col class="text-capitalize th-sm">count</th>
+                  <th scope=col  class="text-capitalize th-sm">mean</th>
+                  <th scope=col  class="text-capitalize th-sm">std</th>
+                  <th scope=col  class="text-capitalize th-sm">min</th>
+                  <th scope=col  class="text-capitalize th-sm">25%</th>
+                  <th scope=col  class="text-capitalize th-sm">50%</th>
+                  <th scope=col  class="text-capitalize th-sm">75%</th>
+                  <th scope=col  class="text-capitalize th-sm">max</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope=row class="d-block text-truncate">associate's degree</th>
+                  <td>222.0</td>
+                  <td>67.88</td>
+                  <td>15.11</td>
+                  <td>26.0</td>
+                  <td>57.00</td>
+                  <td>67.0</td>
+                  <td>80.0</td>
+                  <td>100.0</td>
+                </tr>
+                <tr>
+                  <th scope=row class="d-block text-truncate">bachelor's degree</th>
+                  <td>118.0</td>
+                  <td>69.38</td>
+                  <td>14.94</td>
+                  <td>29.0</td>
+                  <td>61.00</td>
+                  <td>68.0</td>
+                  <td>79.0</td>
+                  <td>100.0</td>
+                </tr>
+                <tr>
+                  <th scope=row class="d-block text-truncate">high school</th>
+                  <td>196.0</td>
+                  <td>62.13</td>
+                  <td>14.53</td>
+                  <td>8.0</td>
+                  <td>53.75</td>
+                  <td>63.0</td>
+                  <td>72.0</td>
+                  <td>99.0</td>
+                </tr>
+                <tr>
+                  <th scope=row class="d-block text-truncate">master's degree</th>
+                  <td>59.0</td>
+                  <td>69.74</td>
+                  <td>15.15</td>
+                  <td>40.0</td>
+                  <td>55.50</td>
+                  <td>73.0</td>
+                  <td>81.0</td>
+                  <td>95.0</td>
+                </tr>
+                <tr>
+                  <th scope=row class="d-block text-truncate">some college</th>
+                  <td>226.0</td>
+                  <td>67.12</td>
+                  <td>14.31</td>
+                  <td>19.0</td>
+                  <td>59.00</td>
+                  <td>67.5</td>
+                  <td>76.0</td>
+                  <td>100.0</td>
+                </tr>
+                <tr>
+                  <th scope=row class="d-block text-truncate">some high school</th>
+                  <td>179.0</td>
+                  <td>63.49</td>
+                  <td>15.92</td>
+                  <td>0.0</td>
+                  <td>53.00</td>
+                  <td>65.0</td>
+                  <td>74.0</td>
+                  <td>97.0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+            <hr>
+            <p>
+              This table effectively illustrates the gap in performance between the different groups with student's of parents with graduate degrees leading the pack. 
+              We can also see how much higher <small>(40 points)</small>the minimum value of that group is than the groups corresponding to lower education levels.
+            </p>
+            <p>
+              The next step will be to repeat the above procedure while selecting students that have completed test prep to see if a trend is revealed.
+            </p>
+            <hr>
+          </div>
+          <div class='bg-light px-5 py-3 my-3'>
+              <p class="lead">Binning results by parental education with prep</p>
+              <hr>
+              <img class="img-fluid rounded mx-auto d-block" src="img/test_prep_y_bins.svg" alt="">
+              <hr>
+              <p>
+                With test prep, the plot normalizes across all groups bringing up the average and minimum values for all students.
+              </p>
+              <p>
+                We can see the change in scores overall, but we really can't see how many students are doing better in each category.  We will adress that next.
+              </p>
+          </div>
+        <div>
         <nav id="pagenav">
             <ul class="pagination justify-content-end">
               <li class="page-item"><a class="page-link" href="viz1.html" tabindex="-1">Previous</a></li>
@@ -117,55 +216,28 @@
               <li class="page-item"><a class="page-link" href="viz4.html">Last</a></li>
             </ul>
         </nav>
-
-
-
-
-
-
-
-
-
-        
-      
-
+        </div>
       </div>
-
-      <!-- Sidebar Widgets Column -->
-      <div class="col-md-4">
-
-        <!-- Categories Widget -->
-        <div class="card my-4">
-          <h5 class="card-header">Analysis</h5>
-          <div class="card-body">
-            <div class="row">
-              <div class="col-lg-6">
-                <ul class="list-unstyled mb-0">
-                  <li>
+      <div class="sidebar col-xl-2 col-lg-3 d-none d-xl-block py-2 mx-5">
+                <ul class="sidebarul list-group list-group-flush mb-0">
+                  <li class="sidebarli list-group-item text-dark">
                     <a href="viz1.html">Overview</a>
                   </li>
-                  <li>
+                  <li class="sidebarli list-group-item text-dark">
                     <a href="viz2.html">Deeper</a>
                   </li>
-                  <li>
+                  <li class="sidebarli list-group-item text-dark">
                     <a href="viz3.html">Deepest</a>
                   </li>
-                  <li>
+                  <li class="sidebarli list-group-item text-dark">
                     <a href="viz4.html">Conclusions</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      
       </div>
-
     </div>
-    <!-- /.row -->
-
   </div>
-  <footer class="container py-5">
+  <footer class="container-fluid py-1 pl-5 mt-3 bg-light">
       <div class="row">
         <div class="col-12 col-md">
           <img id="logolink" src="img/logo.svg" class="d-block mb-2" alt="">
@@ -198,8 +270,5 @@
         </div>
       </div>
     </footer>
-
-
 </body>
-
 </html>

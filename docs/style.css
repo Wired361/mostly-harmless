@@ -1,3 +1,38 @@
+a {
+  color: #343a40;
+}
+
+
+.page-item.active .page-link {
+  background-color: rebeccapurple;
+  border-color: rebeccapurple;
+}
+
+.page-link{
+  color: black;
+}
+
+.page-link:hover {
+  z-index: 2;
+  color: rebeccapurple;
+  text-decoration: none;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+}
+
+.sidebarul {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 1.25rem;
+    height: calc(100vh - 1rem);
+    overflow-y: auto;
+}
+
+.sidebarli{
+  display: block;
+
+}
+
 img#logolink {
   height: 2rem;
   width: 2rem;
@@ -5,8 +40,8 @@ img#logolink {
 
 .btn-primary {
   color: #fff;
-  background-color: #8400FF;
-  border-color: #8400FF;
+  background-color: rebeccapurple;
+  border-color: rebeccapurple;
 }
 
 .btn-primary:hover{
@@ -48,22 +83,19 @@ img#index-t-scat-n {
   border-radius: 2rem 2rem 2rem 2rem;
 }
 
-
-
+.studenttable{
+  height: calc(100vh - 20rem);
+}
 
 .table{
-  max-height: 50%;
   overflow-y: auto;
   -ms-overflow-style: -ms-autohiding-scrollbar;
 }
-
-
-
 thead th {
   position: sticky;
   position: -webkit-sticky;
-  top: 0;
+  top: 1px;
   z-index: 5;
-  border: 0.5rem #8400ff
+  border: 0.5rem rebeccapurple
 }
 
