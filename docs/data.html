@@ -59,10 +59,9 @@
   <div id="datajumbo" class="jumbotron text-center py-3">
       <div class="container">
         <h1 class="jumbotron-heading">Resources</h1>
-        <p class="lead text-muted">Our goal for this project was to investigate the factors involved in improving a student's test scores. This meant a multilevel analysis of the tracked variables affecting the students and the variable's interaction with the scores.</p>
+        <p class="lead text-muted">The data we used for this project was aqcuired from kaggle.com. If you would like to use this data for yourself, consider downloading the set from kaggle using the download link provided.</p>
         <p>
-          <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" class="btn btn-primary my-2">Download</a>
-          <a href="data.html" class="btn btn-secondary my-2">Explore the Data</a>
+          <a href="https://www.kaggle.com/spscientist/students-performance-in-exams" target="_blank" class="btn btn-secondary my-2">Download<br><small class="text muted">Opens in a new tab</small></a>
         </p>
       </div>
     </div>
@@ -74,14 +73,13 @@
 
 
   <div class='container'>
-    <div class='row'>
+    <div class='row align-items-center'>
       <div class='col-md-12 mx-auto'>
-        <div class="col-sm-12 col-md-12 float-right">
-          <div><label class="">Search:<input id="search" type="search" class="form-control form-control-sm"
-                placeholder="Type to Search" aria-controls="studenttable"></label>
+        <div class="container-fluid col-sm-12 col-md-6 mb-3">
+          <div><input id="search" type="search" class="search form-control form-control-sm" placeholder="Type to Search | Use spaces to separate queries" aria-controls="studenttable">
           </div>
         </div>
-        <table id="studenttable" type='text' class="studenttable table table-striped table-responsive table-hover table-md w-100">
+        <table id="studenttable" type='text' class="studenttable table table-striped table-responsive table-hover table-md w-100 results">
           <thead class="thead-dark">
             <tr>
               <th class="text-capitalize th-sm sort">gender</th>
@@ -10107,31 +10105,31 @@
       <div class="row">
         <div class="col-12 col-md">
           <img id="logolink" src="img/logo.svg" class="d-block mb-2" alt="">
-          <small class="d-block mb-3 text-muted">DataViz-2019</small>
+          <small class="mb-3 text-muted d-md-block d-none">DataViz-2019</small>
         </div>
         <div class="col-6 col-md">
-          <h5>Data</h5>
+          <h5>Visualizations</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Overview</a></li>
-            <li><a class="text-muted" href="#">Deeper</a></li>
-            <li><a class="text-muted" href="#">Deepest</a></li>
-            <li><a class="text-muted" href="#">Conclusions</a></li>
+            <li><a class="text-muted" href="viz1.html">Overview</a></li>
+            <li><a class="text-muted" href="viz2.html">Deeper</a></li>
+            <li><a class="text-muted" href="viz3.html">Deepest</a></li>
+            <li><a class="text-muted" href="viz4.html">Conclusions</a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
           <h5>Resources</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">Data</a></li>
-            <li><a class="text-muted" href="#">Download</a></li>
-            <li><a class="text-muted" href="#">API:<small> Under construction</small></a></li>
+            <li><a class="text-muted" href="data.html">Data</a></li>
+            <li><a class="text-muted" href="data.html">Download</a></li>
+            <li><a class="text-muted disabled" href="data.html">API:<small> Under construction</small></a></li>
           </ul>
         </div>
         <div class="col-6 col-md">
           <h5>About</h5>
           <ul class="list-unstyled text-small">
-            <li><a class="text-muted" href="#">References</a></li>
-            <li><a class="text-muted" href="#">Contact Me</a></li>
-            <li><a class="text-muted" href="#">Tools Used</a></li>
+            <li><a class="text-muted" href="links.html">References</a></li>
+            <li><a class="text-muted" href="links.html">Contact Me</a></li>
+            <li><a class="text-muted" href="links.html">Tools Used</a></li>
           </ul>
         </div>
       </div>
@@ -10141,26 +10139,26 @@
 <!-- I didn't want this to be here, but I ran out of time to format it outside the html -->
 
 <script>
-  var $rows = $('#studenttable tr:not(:first)');
-  $('#search').keyup(function () {
-
-    var val = '^(?=.*\\b' + $.trim($(this).val()).split(/\s+/).join('\\b)(?=.*\\b') + ').*$',
-      reg = RegExp(val, 'i'),
-      text;
-
-    $rows.show().filter(function () {
-      text = $(this).text().replace(/\s+/g, ' ');
-      return !reg.test(text);
-    }).hide();
+$(document).ready(function() {
+  $(".search").keyup(function () {
+    var searchTerm = $(".search").val();
+    var listItem = $('.results tbody').children('tr');
+    var searchSplit = searchTerm.replace(/ /g, "'):containsi('")
+    
+  $.extend($.expr[':'], {'containsi': function(elem, i, match, array){
+        return (elem.textContent || elem.innerText || '').toLowerCase().indexOf((match[3] || "").toLowerCase()) >= 0;
+    }
   });
-</script>
-<script>
-  $(document).ready(function () {
-    $('studenttable').DataTable({
-      scrollY: "30vh",
-      scrollCollapse: true,
-    });
+    
+  $(".results tbody tr").not(":containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','false');
   });
-</script>
 
+  $(".results tbody tr:containsi('" + searchSplit + "')").each(function(e){
+    $(this).attr('visible','true');
+  });
+
+	});
+});
+</script>
 </html>
